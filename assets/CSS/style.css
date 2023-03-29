@@ -1,0 +1,638 @@
+/*--------------------------------------------------------------
+                        # Variables
+--------------------------------------------------------------*/
+:root{
+  --color-primary: #650183;
+  --color-secondary: #4e4e4e;
+  --color-tertiary: #fff;
+  --color-fourth: #ffffff3f;
+  --color-SuperiorImg: rgb(0, 0, 0);
+  --color-letras: #000000;
+  --color-extra: #cde1f8;
+  --color-sobra:#96509c;
+}
+
+/*--------------------------------------------------------------
+                        # General
+--------------------------------------------------------------*/
+body {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--color-letras);
+}
+
+a {
+  color: var(--color-letras);
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.box-shadow,.card-blog,.competencia-box,.curso-box,.paralax-mf {
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 1024px) {
+  .bg-image {
+    background-attachment: scroll;
+  }
+}
+
+.colorSuperior-mf {
+  background-color: var(--color-SuperiorImg);
+}
+
+.colorSuperior-mf {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.paralax-mf {
+  position: relative;
+  padding: 8rem 0;
+}
+
+/*-- Secciones --*/
+.sect-4 {
+  padding: 4rem 0;
+}
+
+.sect-pt4 {
+  padding-top: 4rem;
+}
+
+.sect-mt4 {
+  margin-top: 4rem;
+}
+
+/*-- titulos s --*/
+.titulo-s {
+  font-weight: 600;
+  color: var(--color-letras);
+  font-size: 1.1rem;
+}
+
+/*-- titulos A --*/
+.titulo-box {
+  margin-bottom: 4rem;
+}
+
+.titulo-a {
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subtitulo-a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.linea-mf {
+  width: 120px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: var(--color-primary);
+  margin: 0 auto;
+}
+
+/*--/ Titulos izquierdos /--*/
+.titulo-box-2 {
+  margin-bottom: 3rem;
+}
+
+.titulo-left {
+  font-size: 2rem;
+  position: relative;
+}
+
+.titulo-left:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--color-primary);
+  width: 100px;
+  bottom: -12px;
+}
+
+/*------/ Box /------*/
+.box-pl2 {
+  padding-left: 2rem;
+}
+
+.box-shadow-full {
+  padding: 3rem 1.25rem;
+  position: relative;
+  background-color: var(--color-tertiary);
+  margin-bottom: 3rem;
+  z-index: 2;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .box-shadow-full {
+    padding: 3rem;
+  }
+}
+
+/*------/ sociales /------*/
+.sociales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.sociales ul li {
+  display: inline-block;
+}
+
+.sociales .ico-circle {
+  height: 40px;
+  width: 40px;
+  font-size: 1.2rem;
+  border-radius: 10%;
+  line-height: 1.9;
+  margin: 0 15px 0 0;
+  box-shadow: 0 0 0 3px var(--color-primary);
+  transition: all 500ms ease;
+}
+
+.sociales .ico-circle:hover {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  box-shadow: 0 0 0 3px var(--color-extra);
+  transition: all 500ms ease;
+}
+
+/*------/ Ul listas /------*/
+.list-ico, .sociales ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.list-ico {
+  line-height: 2;
+}
+
+.list-ico span {
+  color: var(--color-primary);
+  margin-right: 10px;
+}
+
+/*------ Ico Circle ------*/
+.ico-circle {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 10%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px var(--color-primary);
+  display: block;
+}
+
+/*--------------------------------------------------------------
+                          # Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: var(--color-primary);
+}
+
+#header .logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-tertiary);
+}
+
+/*--------------------------------------------------------------
+                     # NAVEGACION DEL MENU
+--------------------------------------------------------------*/
+.nav__contenedor {
+  padding: 0;
+}
+
+.nav__contenedor ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__contenedor li {
+  position: relative;
+}
+
+.nav__contenedor>ul>li {
+  white-space: nowrap;
+  padding: 10px 0 10px 3px;
+}
+
+.ul__nav{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.ul__nav * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.ul__nav a{ 
+  position: relative;
+  color: var(--color-extra);
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+}
+
+.ul__nav a:before,
+.ul__nav a:after{
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  content: '';
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.ul__nav a:before{
+  right: 0;
+  top: 0;
+  border-right: 3px solid var(--color-tertiary);
+  border-top: 3px solid var(--color-tertiary);
+  -webkit-transform: translate(100%, -50%);
+  transform: translate(100% -50%);
+}
+
+.ul__nav a:after{
+  left: 0;
+  bottom: 0;
+  border-left: 3px solid var(--color-tertiary);
+  border-bottom: 3px solid var(--color-tertiary);
+  -webkit-transform: translate(-100%, 50%);
+  transform:translate (-100% 50%);
+}
+
+.ul__nav a:hover,
+.ul__nav .home a{
+  color: var(--color-tertiary);
+  text-shadow: var(--color-sobra) -3px 0;
+  cyan: 3px 0;
+}
+
+.ul__nav a:hover:before,
+.ul__nav .home a:before,
+.ul__nav a:hover:after,
+.ul__nav .home a:after{
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  color: var(--color-tertiary);
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .nav__contenedor ul {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+                    # SECCION DE INICIO
+--------------------------------------------------------------*/
+.inicio{
+  background: linear-gradient(to top, rgba(30,35,38,.5), rgba(30,35,38,.9)), url(../IMG/fondo1.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: var(--color-tertiary);
+  display: flex;
+
+}
+
+/*Parte que contine la imagen*/
+.inicio .contenido-banner{
+ padding-top: 35px;
+  background-color: var(--color-fourth);
+  max-width: 310px;
+  text-align: center;
+  margin: auto;
+  border-radius: 50px;
+}
+
+.inicio .contenido-banner img{
+  display: block;
+  width: 80%;
+  margin: auto;
+  border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+  margin-top: 40px;
+  font-size: 42px;
+  font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: normal;
+}
+.inicio .contenido-banner .redes a{
+  color: var(--color-tertiary);
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--color-tertiary);
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover{
+  background-color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------
+                          # SECCION PERFIL
+--------------------------------------------------------------*/
+.perfil-mf{
+  align-items: center;
+}
+.perfil-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-radius: 1rem;
+}
+
+.perfil-mf .perfil-img {
+  margin-bottom: 2rem;
+}
+
+.perfil-mf .perfil-img img {
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .perfil-mf  {
+    height: 100vh;
+  }
+  .perfil-mf .box-pl2 {
+    margin-top: 3rem;
+    padding-left: 0rem;
+  }
+}
+
+/*--------------------------------------------------------------
+                      # SECCION DE APTITUDES
+--------------------------------------------------------------*/
+.section-aptitudes{
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .section-aptitudes {
+    height: 100vh;
+  }
+} 
+
+.tutuloAptitudes{
+  color: var(--color-tertiary);
+}
+
+.counter-box {
+  color: var(--color-tertiary);
+  text-align: center;
+  font-weight: bold
+}
+
+@media (min-width: 577px) {
+  .counter-box {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.counter-ico {
+  margin-bottom: 1.5rem;
+}
+
+.counter-ico .ico-circle {
+  height: 10rem;
+  width: 10rem;
+  line-height: 5;
+  background-color: var(--color-fourth);
+  box-shadow: 0 0 0 5px var(--color-extra);
+}
+
+/*--------------------------------------------------------------
+                          # SECCION DE CURSOS
+--------------------------------------------------------------*/
+.cursos-mf{
+  align-items: center;
+}
+
+.curso-box {
+  background-color: var(--color-tertiary);
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.curso-box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: var(--color-tertiary);
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 10px var(--color-extra);
+}
+
+.curso-box .curso-ico {
+  margin-bottom: 1rem;
+  color: var(--color-letras);
+}
+
+.curso-box .ico-circle {
+  transition: all 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curso-box .ico-circle i {
+  line-height: 0;
+  font-size: 40px;
+}
+
+.curso-box .s-titulo {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.curso-box .descripcion {
+  color: var(--color-letras);
+}
+
+@media (min-width: 768px) {
+  .cursos-mf  {
+    height: 100vh;
+  }
+}
+
+/*--------------------------------------------------------------
+                    # SECCION DE habilidades
+--------------------------------------------------------------*/
+.habilidades-mf .box-shadow-full{
+  margin-top: 4rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 767px) {
+  .contacto-mf .box-pl2 {
+    margin-top: 3rem;
+    padding-left: 0rem;
+  }
+}
+
+/*--------------------------------------------------------------
+                      # SECCION COMPETENCIAS
+--------------------------------------------------------------*/
+.competencia-box {
+  margin-bottom: 3rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: var(--color-tertiary);
+}
+
+.competencia-box:hover img {
+  transform: scale(1.05);
+}
+
+.competencia-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 16REM;
+}
+
+.competencia-img img {
+  transition: all 1s;
+}
+
+.competencia-content {
+  padding: 2rem 3% 1rem 4%;
+}
+
+.w-titulo {
+  font-size: 1.2rem;
+}
+.alinear{
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+                      # SECCION EXPERIENCIA 
+--------------------------------------------------------------*/
+.experiencia-mf{
+  align-items: center;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .experiencia-mf  {
+    height: 100vh;
+  }
+}
+
+/*--------------------------------------------------------------
+                    # SECCION DE CONTACTO
+--------------------------------------------------------------*/
+.paralax-mf{
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .paralax-mf {
+    height: 100vh;
+  }
+} 
+
+.footer-paralax {
+  padding: 4rem 0 0 0;
+}
+
+.contacto-mf .box-shadow-full{
+  margin-top: 4rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 767px) {
+  .contacto-mf .box-pl2 {
+    margin-top: 3rem;
+    padding-left: 0rem;
+  }
+}
+
+/*--------------------------------------------------------------
+                              # FOOTER
+--------------------------------------------------------------*/
+footer {
+  text-align: center;
+  color: var(--color-tertiary);
+  padding: 25px 0;
+  background: var(--color-primary);
+}
+
+
+
